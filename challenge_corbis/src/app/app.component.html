@@ -567,8 +567,10 @@
 
 <!-- <div class="container">
 </div> -->
-<app-toolbar style="width: 100%; position: fixed"></app-toolbar>
-<app-sidebar style="position: fixed"></app-sidebar>
-<app-sidepanel style="position: fixed; right: 0"></app-sidepanel>
+<app-sidebar style="position: fixed; top: 0"></app-sidebar>
+<app-sidepanel
+  style="position: fixed; right: 0; top: 10rem; z-index: 1"
+></app-sidepanel>
+<app-toolbar></app-toolbar>
 
 <router-outlet></router-outlet>

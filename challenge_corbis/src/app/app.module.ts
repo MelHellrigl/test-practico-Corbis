@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SidepanelComponent } from './components/sidepanel/sidepanel.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PanelComponent } from './components/panel/panel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
     SidebarComponent,
-    SidepanelComponent
+    SidepanelComponent,
+    PanelComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
