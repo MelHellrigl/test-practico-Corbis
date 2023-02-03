@@ -11,3 +11,4 @@ Angular - Bootstrap - Typescript - HTML y CSS
 - Ejecute `ng serve` o `npm start` para levantar el servidor de desarrollo y navegue a `http://localhost:4200/`.
 
 ## Link Deploy
+https://test-practico-hellriglmelissa.netlify.app/
