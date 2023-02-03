@@ -3,10 +3,10 @@
   style="height: 100vh"
 >
   <nav class="navbar">
-    <div class="container-fluid d-flex flex-column">
-      <p class="d-flex flex-column">
+    <div class="container-fluid d-flex flex-row justify-content-end">
+      <p class="d-flex flex-column nav-fixed">
         <button
-          class="navbar-toggler"
+          class="toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarsExample01"
@@ -27,7 +27,7 @@
           </svg>
         </button>
         <br />
-        <button class="navbar-toggler" type="button">
+        <button class="toggler" type="button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -43,7 +43,7 @@
         </button>
       </p>
 
-      <div class="collapse navbar-collapse" id="navbarsExample01">
+      <div class="collapse navbar-collapse pe-5" id="navbarsExample01">
         <div
           class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white"
           style="width: 380px"
@@ -51,23 +51,23 @@
         >
           <input
             type="search"
-            class="form-control"
-            placeholder="Search projects, clients, staff and more"
+            class="form-control text-placeh"
+            placeholder="Make a comment"
             aria-label="Search"
           />
           <div class="d-flex flex-row justify-content-end my-3">
             <button class="btn btn-light">cancel</button>
-            <button class="btn btn-light">submit</button>
+            <button class="btn btn-light border">submit</button>
           </div>
-          <div class="list-group list-group-flush border-bottom scrollarea">
+          <div class="list-group list-group-flush scrollarea">
             <div
-              class="list-group-item list-group-item-action py-3 lh-sm"
+              class="list-group-item list-group-item-action py-4 lh-sm border-0"
               aria-current="true"
               style="width: 380px"
               *ngFor="let comment of comments; index as i"
             >
               <div
-                class="d-flex w-100 align-items-center justify-content-between"
+                class="d-flex w-100 align-items-start justify-content-between"
               >
                 <div class="d-flex flex-row align-items-center">
                   <img
@@ -77,21 +77,21 @@
                     height="32"
                     class="border me-3"
                   />
-                  <div class="d-flex flex-column">
-                    <strong class="mb-1">{{ comment.author }}</strong>
+                  <div class="d-flex flex-column mb-1">
+                    <strong class="">{{ comment.author }}</strong>
                     <small>{{ comment.date }}</small>
                   </div>
                 </div>
-                <small>Resolve</small>
+                <small class="text-hover">Resolve</small>
               </div>
-              <div class="col-10 mb-1 small">
+              <div class="col-11 mb-1 small">
                 {{ comment.comment }}
               </div>
               <div
                 class="d-flex w-100 align-items-center justify-content-between"
               >
-                <strong>Reply</strong>
-                <div class="d-flex flex-row align-items-center">
+                <strong class="py-2">Reply</strong>
+                <div class="d-flex flex-row">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -125,25 +125,3 @@
     </div>
   </nav>
 </div>
-<!-- 
-<div class="pos-f-t">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <h4 class="text-white">Collapsed content</h4>
-      <span class="text-muted">Toggleable via the navbar brand.</span>
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-dark">
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarToggleExternalContent"
-      aria-controls="navbarToggleExternalContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div> -->

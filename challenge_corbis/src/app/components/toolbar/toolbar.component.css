@@ -1,16 +1,7 @@
 .bg-gris {
   background-color: #f1f1f1;
 }
-.btn-naranja {
-  background-color: #ff6537;
-  color: white;
-}
 
-.btn-naranja-bold {
-  background-color: #eb4716;
-  color: white;
-}
-
-.color-text {
-  color: #fc9779;
+.text-placeh::placeholder {
+  color: rgb(197, 197, 197);
 }

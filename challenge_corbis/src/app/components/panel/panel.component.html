@@ -1,4 +1,4 @@
-<div class="pb-3" style="margin-left: 6rem">
+<div class="pb-3" style="margin-left: 7rem">
   <div class="d-flex flex-row align-items-center">
     <div class="dropdown mb-3 me-3">
       <button class="btn btn-naranja-bold rounded-0" type="button">
@@ -58,12 +58,13 @@
             >
           </li>
           <li class="nav-item">
-            <a class="tab-color disabled" href="#kpis" data-bs-toggle="tab"
-              >KPIs</a
-            >
+            <a class="tab-color" href="#kpis" data-bs-toggle="tab">KPIs</a>
           </li>
         </ul>
-        <div class="table-responsive" style="position: relative">
+        <div
+          class="table-responsive"
+          style="position: relative; min-height: 40vh"
+        >
           <div class="tab-pane" style="position: absolute; width: 100%">
             <table
               class="table table-border fade show active"
@@ -71,8 +72,22 @@
             >
               <thead>
                 <tr>
-                  <th scope="col" class="ps-5 py-4">Nº</th>
-                  <th scope="col" class="py-4 w-75">PERSPECTIVES</th>
+                  <th scope="col" class="">
+                    <select
+                      disabled
+                      class="form-select ps-5 py-3 border-0 font-bold bg-white"
+                    >
+                      <option selected>Nº</option>
+                    </select>
+                  </th>
+                  <th scope="col" class="w-75">
+                    <select
+                      disabled
+                      class="form-select py-3 border-0 font-bold bg-white"
+                    >
+                      <option selected>PERSPECTIVES</option>
+                    </select>
+                  </th>
                   <th scope="col" class="py-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -124,10 +139,38 @@
             <table class="table table-border fade" id="objetives">
               <thead>
                 <tr>
-                  <th scope="col" class="ps-5 py-4">OBJECTIVE</th>
-                  <th scope="col" class="py-4">PERSPECTIVES</th>
-                  <th scope="col" class="py-4">OWNER</th>
-                  <th scope="col" class="py-4">DESCRIPTION</th>
+                  <th scope="col" class="">
+                    <select
+                      disabled
+                      class="form-select ps-4 py-3 border-0 font-bold bg-white"
+                    >
+                      <option selected>OBJECTIVE</option>
+                    </select>
+                  </th>
+                  <th scope="col" class="">
+                    <select
+                      disabled
+                      class="form-select py-3 border-0 font-bold bg-white"
+                    >
+                      <option selected>PERSPECTIVES</option>
+                    </select>
+                  </th>
+                  <th scope="col" class="">
+                    <select
+                      disabled
+                      class="form-select py-3 border-0 font-bold bg-white"
+                    >
+                      <option selected>OWNER</option>
+                    </select>
+                  </th>
+                  <th scope="col" class="">
+                    <select
+                      disabled
+                      class="form-select py-3 border-0 font-bold bg-white"
+                    >
+                      <option selected>DESCRIPTION</option>
+                    </select>
+                  </th>
                   <th scope="col" class="py-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,29 @@
+.nav-fixed {
+  position: fixed;
+
+  padding: 30vh 5px;
+  z-index: 1;
+  height: 100vh;
+  bottom: 0;
+  right: 0;
+  border-left: 1px solid rgb(228, 228, 228);
+  background-color: white;
+}
+
+.nav-fixed button {
+  border: none;
+}
+
+.text-placeh::placeholder {
+  color: rgb(197, 197, 197);
+}
+
+.text-hover {
+  color: rgb(148, 148, 148);
+}
+
+.text-hover:hover {
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}

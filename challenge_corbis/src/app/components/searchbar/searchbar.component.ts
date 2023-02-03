@@ -13,7 +13,7 @@ export class SearchbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.search.valueChanges
-      .pipe(debounceTime(500))
+      .pipe(debounceTime(300))
       .subscribe((val: any) => this.searchEmitter.emit(val));
   }
 
