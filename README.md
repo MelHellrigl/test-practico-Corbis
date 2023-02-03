@@ -1,4 +1,4 @@
-# test-practico-Corbis
+# Test práctico Corbis
 El objetivo de éste test práctico consiste en realizar aplicación simple, con el framework Angular,
 que simule una consola de elementos, utilizando las especificaciones provistas por el área de
 diseño en un prototipo realizado en Adobe XD, y utilizando datos provistos desde una API. 
