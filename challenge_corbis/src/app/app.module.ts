@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SidepanelComponent } from './components/sidepanel/sidepanel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PanelComponent } from './components/panel/panel.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { PanelComponent } from './components/panel/panel.component';
     SidepanelComponent,
     PanelComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

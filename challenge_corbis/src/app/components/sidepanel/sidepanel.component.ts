@@ -18,7 +18,6 @@ export class SidepanelComponent implements OnInit {
   public getComment() {
     this.apiservice.getApi().subscribe((resp: any) => {
       this.comments = resp.comments;
-      console.log('soy comments', this.comments);
     });
   }
 }

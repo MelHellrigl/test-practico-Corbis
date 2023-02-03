@@ -14,4 +14,7 @@ export class ApiService {
   getApi() {
     return this.http.get<TableResponse>(this.url);
   }
+  // getSeatch(name: string) {
+  //   return this.http.get<TableResponse>(this.url.filter());
+  // }
 }
