@@ -1,3 +1,4 @@
+//Generate by https://quicktype.io/
 export interface TableResponse {
   perspectives: Perspective[];
   objectives: Objective[];

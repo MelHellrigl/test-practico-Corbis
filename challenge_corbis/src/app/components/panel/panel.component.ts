@@ -9,14 +9,13 @@ import { ApiService } from '../../services/api.service';
 export class PanelComponent implements OnInit {
   public objetives: Array<any> = [];
   public perspectives: Array<any> = [];
-  public name: string = '';
+  public filterValue: string = '';
 
   constructor(private apiservice: ApiService) {}
 
   ngOnInit(): void {
     this.getObjetives();
     this.getPerspectives();
-    this.search();
   }
 
   public getObjetives() {
@@ -29,14 +28,8 @@ export class PanelComponent implements OnInit {
       this.perspectives = resp.perspectives;
     });
   }
-  // public search() {
-  //   this.apiservice.getSeatch(this.name).subscribe((data) => {
-  //     console.log('nameee', data);
-  //   });
-  // }
-  public search() {
-    this.apiservice.getApi().subscribe((data: any) => {
-      console.log('nameee', data);
-    });
+
+  handleSearch(value: string) {
+    this.filterValue = value;
   }
 }
