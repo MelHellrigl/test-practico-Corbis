@@ -38,138 +38,142 @@
   </div>
   <!-- class="d-grid gap-3" -->
   <div
-    class="shadow p-4 ps-0 mb-5 bg-white rounded"
-    style="grid-template-columns: 1fr 1fr; margin-right: 4.5rem"
+    class="shadow p-4 ps-0 mb-5 bg-white rounded row"
+    style="margin-right: 4.5rem; position: relative"
   >
     <div class="bg-light border rounded-3">
       <div class="w-100 container">
-        <ul class="nav nav-tabs bg-gris">
+        <ul class="nav nav-tabs bg-gris py-3">
           <li class="nav-item">
             <a
-              class="nav-link link-dark active"
+              class="tab-color active"
               href="#perspectives"
               data-bs-toggle="tab"
               >Perspectives</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link link-dark" href="#objetives" data-bs-toggle="tab"
+            <a class="tab-color" href="#objetives" data-bs-toggle="tab"
               >Objetives</a
             >
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link link-dark disabled"
-              href="#kpis"
-              data-bs-toggle="tab"
+            <a class="tab-color disabled" href="#kpis" data-bs-toggle="tab"
               >KPIs</a
             >
           </li>
         </ul>
-        <div class="table-responsive">
-          <table
-            class="table table-border table-hover fade in active"
-            id="perspectives"
-          >
-            <thead>
-              <tr>
-                <th scope="col" class="ps-5">Nº</th>
-                <th scope="col">PERSPECTIVES</th>
-                <th scope="col">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-three-dots-vertical"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                    />
-                  </svg>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr
-                *ngFor="let perspective of perspectives | search : filterValue"
-              >
-                <th scope="row" class="ps-5">
-                  <small class="color-text">{{ perspective.id }}</small>
-                </th>
-                <td>{{ perspective.name }}</td>
-                <td>
-                  <button class="border">
+        <div class="table-responsive" style="position: relative">
+          <div class="tab-pane" style="position: absolute; width: 100%">
+            <table
+              class="table table-border fade show active"
+              id="perspectives"
+            >
+              <thead>
+                <tr>
+                  <th scope="col" class="ps-5 py-4">Nº</th>
+                  <th scope="col" class="py-4 w-75">PERSPECTIVES</th>
+                  <th scope="col" class="py-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-three-dots"
+                      class="bi bi-three-dots-vertical"
                       viewBox="0 0 16 16"
                     >
                       <path
-                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
                       />
                     </svg>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <table class="table table-border table-hover fade" id="objetives">
-            <thead>
-              <tr>
-                <th scope="col" class="ps-5">OBJECTIVE</th>
-                <th scope="col">PERSPECTIVES</th>
-                <th scope="col">OWNER</th>
-                <th scope="col">DESCRIPTION</th>
-                <th scope="col">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-three-dots-vertical"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
-                    />
-                  </svg>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr *ngFor="let objetive of objetives | search : filterValue">
-                <th scope="row" class="ps-5">
-                  <small class="color-text"
-                    >{{ objetive.code }} Objective</small
-                  >
-                </th>
-                <td>{{ objetive.perspective.name }}</td>
-                <td>{{ objetive.name }}</td>
-                <td>{{ objetive.description }}</td>
-                <td>
-                  <button class="border">
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  *ngFor="
+                    let perspective of perspectives | search : filterValue
+                  "
+                >
+                  <th scope="row" class="ps-5">
+                    <small class="color-text">{{ perspective.id }}</small>
+                  </th>
+                  <td>{{ perspective.name }}</td>
+                  <td>
+                    <button class="border">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-three-dots"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="tab-pane">
+            <table class="table table-border fade" id="objetives">
+              <thead>
+                <tr>
+                  <th scope="col" class="ps-5 py-4">OBJECTIVE</th>
+                  <th scope="col" class="py-4">PERSPECTIVES</th>
+                  <th scope="col" class="py-4">OWNER</th>
+                  <th scope="col" class="py-4">DESCRIPTION</th>
+                  <th scope="col" class="py-4">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
                       height="16"
                       fill="currentColor"
-                      class="bi bi-three-dots"
+                      class="bi bi-three-dots-vertical"
                       viewBox="0 0 16 16"
                     >
                       <path
-                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"
                       />
                     </svg>
-                  </button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let objetive of objetives | search : filterValue">
+                  <th scope="row" class="ps-5">
+                    <small class="color-text"
+                      >{{ objetive.code }} Objective</small
+                    >
+                  </th>
+                  <td>{{ objetive.perspective.name }}</td>
+                  <td>{{ objetive.name }}</td>
+                  <td>{{ objetive.description }}</td>
+                  <td>
+                    <button class="border">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-three-dots"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+                        />
+                      </svg>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <nav aria-label="Page navigation example" class="me-5 my-5">
@@ -192,8 +196,5 @@
         </ul>
       </nav>
     </div>
-    <!-- <div class="bg-light border rounded-3">
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      </div> -->
   </div>
 </div>

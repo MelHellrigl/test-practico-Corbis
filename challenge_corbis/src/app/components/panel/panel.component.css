@@ -14,3 +14,21 @@
 .color-text {
   color: #fc9779;
 }
+
+.tab-color {
+  color: #ff6537;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: larger;
+  padding: 15px;
+  margin-left: 15px;
+}
+.tab-color:focus {
+  color: #4c4743;
+  background-color: white;
+}
+
+.active {
+  color: #4c4743;
+  background-color: white;
+}
